@@ -1,0 +1,60 @@
+    # workstation-conf = { pkgs, ... }: {
+    #   # List packages installed in system profile. To search by name, run:
+    #   # $ nix-env -qaP | grep wget
+    #   environment.systemPackages =
+    #     [
+    #       pkgs.vim
+    #       pkgs.curl
+    #       pkgs.bat
+    #       pkgs.zoxide
+    #       pkgs.eza
+    #     ];
+
+    #   # Auto upgrade nix package and the daemon service.
+    #   services.nix-daemon.enable = true;
+    #   security.pam.enableSudoTouchIdAuth = true;
+    #   nix.package = pkgs.nix;
+
+    #   # Necessary for using flakes on this system.
+    #   nix.settings.experimental-features = "nix-command flakes";
+
+    #   # Create /etc/zshrc that loads the nix-darwin environment.
+    #   programs = {
+    #     # default shell on catalina
+    #     zsh.enable = true;
+    #     gnupg.agent.enable = true;
+    #   };
+
+    #   system.defaults = {
+    #     dock = {
+    #       autohide = true;
+    #       mru-spaces = false;
+    #       show-recents = false;
+    #     };
+    #     finder = {
+    #       AppleShowAllFiles = true;
+    #       AppleShowAllExtensions = true;
+    #       CreateDesktop = false;
+    #       FXPreferredViewStyle = "clmv";
+    #     };
+    #     loginwindow = {
+    #       LoginwindowText = "NWL NEXUS";
+    #       GuestEnabled = false;
+    #     };
+
+    #     screencapture.location = "~/Pictures/screenshots";
+    #     screensaver.askForPasswordDelay = 10;
+    #   };
+
+    #   # Set Git commit hash for darwin-version.
+    #   system.configurationRevision = self.rev or self.dirtyRev or null;
+
+    #   # Used for backwards compatibility, please read the changelog before changing.
+    #   # $ darwin-rebuild changelog
+    #   system.stateVersion = 4;
+
+    #   time.timeZone = "America/New_York";
+
+    #   # The platform the configuration will be used on.
+    #   nixpkgs.hostPlatform = "aarch64-darwin";
+    # };
