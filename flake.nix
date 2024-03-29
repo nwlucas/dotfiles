@@ -34,7 +34,7 @@
   let
     inherit (utils.lib) mkFlake;
     inherit (stable.lib.filesystem) listFilesRecursive;
-    inherit (stable.lib) listToAttrs hasSuffix removeSuffix removePrefix;
+    inherit (stable.lib) listToAttrs hasSuffix hasPrefix removeSuffix removePrefix ;
 
     nixosConfig = {
       system = "x86_64-linux";
@@ -62,7 +62,7 @@
     };
 
     darwinConfig = {
-      system = "aarch64-darwin";
+      system = "x86_64-darwin";
       output = "darwinConfigurations";
       builder = darwin.lib.darwinSystem;
 
