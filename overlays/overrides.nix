@@ -16,6 +16,7 @@ channels: final: prev: {
     zoxide
     ripgrep
     eza
+    curl
 
     # Other
     nerdfonts
