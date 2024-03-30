@@ -18,7 +18,7 @@
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus";
 
     nix-index.url = "github:Mic92/nix-index-database";
-    nix-index.inputs.nixpkgs.follows = "stable";
+    nix-index.inputs.nixpkgs.follows = "unstable";
   };
 
   outputs =
