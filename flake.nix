@@ -76,7 +76,7 @@
       let
         platform =
           if hasSuffix "darwin" dir
-          then darwinConfig else nixosConfig;
+          then darwinMConfig else nixosConfig;
 
       in
         listToAttrs (map
