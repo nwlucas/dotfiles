@@ -78,7 +78,7 @@
     "nix-index": {
       "inputs": {
         "nixpkgs": [
-          "stable"
+          "unstable"
         ]
       },
       "locked": {
