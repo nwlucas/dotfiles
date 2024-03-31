@@ -24,21 +24,21 @@
     vscode-extensions.inputs.nixpkgs.follows = "stable";
   };
 
-  outputs =
-    { self,
-      stable,
-      unstable,
-      darwin,
-      hm,
-      hardware,
-      persistence,
-      utils,
-      vscode-extensions,
-      ... } @ inputs:
+  outputs = {
+    self,
+    stable,
+    unstable,
+    darwin,
+    hm,
+    hardware,
+    persistence,
+    utils,
+    vscode-extensions,
+    ... } @ inputs:
   let
     inherit (utils.lib) mkFlake;
-    inherit (stable.lib.filesystem) listFilesRecursive;
-    inherit (stable.lib) listToAttrs hasSuffix hasPrefix removeSuffix removePrefix ;
+    inherit (unstable.lib.filesystem) listFilesRecursive;
+    inherit (unstable.lib) listToAttrs hasSuffix hasPrefix removeSuffix removePrefix ;
 
     nixosConfig = {
       system = "x86_64-linux";

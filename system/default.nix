@@ -2,8 +2,8 @@
 
 {
   imports = [
-    # ../modules
-    # ./hm.nix
+    ../modules
+    ./hm.nix
     ./nix.nix
     ./pkgs.nix
     ./shells.nix
@@ -21,7 +21,7 @@
       jetbrains-mono
       powerline-symbols
       # Renamed to noto-fonts-color-emoji in 23.11
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       (nerdfonts.override {
         fonts = [
           "NerdFontsSymbolsOnly"
