@@ -21,6 +21,13 @@ in
         inherit version user theme;
       };
 
+      programs.direnv = {
+        enable = true;
+        nix-direnv = {
+          enable = true;
+        };
+      };
+
       users.${user} = {
         imports = cfg ++ [
           inputs.nix-index.hmModules.nix-index
